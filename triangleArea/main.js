@@ -17,11 +17,27 @@ const calculate = (e) => {
     document.getElementById('lado1').value = '';
     document.getElementById('lado2').value = '';
     document.getElementById('lado3').value = '';
+    document.querySelector('#submit').disabled = true;
 
-    return false
-    
+    return false;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('form').onsubmit = calculate;
+    const inputs = document.querySelectorAll("input");
+
+    inputs.forEach(input => {
+        input.onkeyup = () => {
+            const lado1 = document.querySelector("#lado1").value.trim();
+            const lado2 = document.querySelector("#lado2").value.trim();
+            const lado3 = document.querySelector("#lado3").value.trim();
+            
+            if(lado1.length && lado2.length && lado3.length > 0) {
+                document.querySelector('#submit').disabled = false;
+            } else {
+                document.querySelector('#submit').disabled = true;
+            };
+        };
+    });
+
+    document.querySelector('form').onsubmit = calculate;  
 });
