@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+    <script>
+        
+        const calculate = (e) => {
+            e.preventDefault();
+
+            const num1 = parseFloat(document.getElementById('lado1').value);
+            const num2 = parseFloat(document.getElementById('lado2').value);
+            const num3 = parseFloat(document.getElementById('lado3').value);
+
+            let suma = (num1 + num2 + num3)/2
+            let area =  Math.sqrt(suma*((suma-num1)*(suma-num2)*(suma-num3)));
+            
+            const li = document.createElement('li');
+            li.innerHTML = area;
+
+            document.querySelector('#resultado').append(li);
+
+            document.getElementById('lado1').value = '';
+            document.getElementById('lado2').value = '';
+            document.getElementById('lado3').value = '';
+
+            return false
+            
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('form').onsubmit = calculate;
+        });
+    </script>
+</head>
+<body>
+    <h1>calculate triangle area:</h1>
+    <form>
+        <input type="text" placeholder="lado1" id="lado1">
+        <input type="text" placeholder="lado2" id="lado2">
+        <input type="text" placeholder="lado3" id="lado3">
+        <button type="submit">calcular</button>
+    </form>
+    <ul id="resultado"></ul>
+</body>
+</html>
