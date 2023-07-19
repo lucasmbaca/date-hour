@@ -1,0 +1,35 @@
+*{
+        font-family: sans-serif;
+}
+
+div {
+    margin:10px;
+    padding-bottom:10px;
+    text-align: center;
+    border: solid black;
+    box-shadow: 5px 10px;
+}
+
+
+li {
+    animation-duration: 2s;
+    animation-name: slidein;
+    border: solid black;
+    box-shadow: 2px 2px;
+    padding: 10px;
+    list-style: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

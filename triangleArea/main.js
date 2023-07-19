@@ -10,7 +10,7 @@ const calculate = (e) => {
     let area =  Math.sqrt(suma*((suma-num1)*(suma-num2)*(suma-num3)));
     
     const li = document.createElement('li');
-    li.innerHTML = area;
+    li.innerHTML = `El area del calculo de los numeros ${num1} - ${num2} - ${num3} es: ${area}`;
 
     document.querySelector('#resultado').append(li);
 
