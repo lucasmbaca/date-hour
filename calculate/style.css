@@ -1,0 +1,17 @@
+#container{
+    margin: 10px;
+    padding: 10px;
+    width: 18%;
+    border:black solid;
+}
+
+.group-buttons{
+    margin: 10px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+
+

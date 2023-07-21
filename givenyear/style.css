@@ -1,0 +1,15 @@
+*{
+    font-family: sans-serif;
+}
+
+form{
+    border: black solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+h1{
+    color: crimson;
+}
